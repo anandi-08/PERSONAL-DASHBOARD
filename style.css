@@ -1,0 +1,262 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  body {
+  font-family: 'arial','Times New Roman', Times, serif;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s, font-family 0.3s;
+  background-color: rgb(171, 41, 41);
+  color: black;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #111010;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.navbar .welcome-text {
+  font-size: 30px;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  height: 100vh;              
+  width: 180px;              
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;     
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px 10px;
+  border-radius: 0 12px 12px 0; 
+  overflow-y: auto;           
+}
+.side-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; 
+  gap: 13px;              
+}
+.side-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: block; 
+  transition: background-color 0.3s;
+}
+
+.side-links li a:hover {
+  background-color: #2ec74f; 
+  color: white;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2.5rem;
+}
+h2 {
+  text-align: center;
+  font-size: 25px;
+}
+h3,p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.tab-side {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tab-side button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #c3f3ee;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.side-links li a:hover {
+  background-color: #2ec74f; 
+  color: white;
+  border-radius: 8px;
+}
+.tab-content,
+section {
+  background: rgb(245, 211, 195);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(6, 5, 5, 0.1);
+}
+.dashboard-grid {
+  display: grid;
+  margin-left: 175px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+ grid-auto-flow: dense;
+}
+.card{
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  height: fit-content;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+
+}
+input[type="text"],
+input[type="date"],
+input[type="datetime-local"],
+textarea,
+select {
+  padding: 10px;
+  width: 200px; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #0f0f0f;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #397690;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #9626bc;
+}
+.calendar {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+}
+
+#calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  text-align: center;
+}
+
+.calendar-grid div {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.today {
+  background-color: #55b455 !important;
+  font-weight: bold;
+  height: 10px;
+}
+
+#timer-display {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#Theme-Controls {
+ height: 500px;
+}
+#Today {
+ height: 500px;
+}
+#search {
+ height: 200px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+#Game {
+background-color: white;
+}
+.mood-tracker {
+  text-align: center;
+  padding: 20px;
+}
+
+.mood-options {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  gap:auto;
+}
+
+.mood {
+  font-size: 32px;
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mood:hover {
+  transform: scale(1.2);
+}
+
+.mood.selected {
+  border-color: #00bcd4;
+  background-color: #e0f7fa;
+}
+#Surprise {
+  background-color: white;
+}

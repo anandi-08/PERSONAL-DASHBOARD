@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+     <nav class="navbar">
+    <div class="logo">📌 MINE</div>
+    <div class="welcome-text">Welcome, ANANDI</div>
+  </nav>
+<aside class="sidebar">
+  <ul class="side-links" id="side-links">
+    <li><a href="#Customize">Customize</a></li>
+    <li><a href="#Today">Today</a></li>
+    <li><a href="#Update">Update</a></li>
+    <li><a href="#Info">Info</a></li>
+    <li><a href="#Quick Apps">Quick Apps</a></li>
+    <li><a href="#Entertainment">Entertainment</a></li>
+    <li><a href="#Calendar">Calendar</a></li>
+    <li><a href="#Calculator">Calculator</a></li>
+    <li><a href="#Game">Game</a></li>
+    <li><a href="#Timer">Timer</a></li>
+    <li><a href="#Study & Jobs">Study & Jobs</a></li>
+    <li><a href="#Fun">Fun</a></li>
+  </ul>
+</aside>
+ <h1 style="margin-left: 50px;">SMART BOARD</h1>
+ <h3 style="margin-left: 50px;">Welcome to Your Dashboard</h3>
+ <p style="margin-left: 50px;">This is your personal content after unlocking.</p>
+ <div class="dashboard-grid">
+    <!-- 🎨 Theme Controls -->
+    <section id ="Customize">
+  <div class="card theme">
+    <h2>Theme-Controls</h2>
+  <label>Background Color: <input type="color" id="bg-color" /></label><br><br>
+  <label>Text Color: <input type="color" id="text-color" /></label><br><br>
+  <label>Font:
+    <select id="font-select">
+      <option value="'Segoe UI', sans-serif">Segoe UI</option>
+      <option value="'Arial', sans-serif">Arial</option>
+      <option value="'Courier New', monospace">Courier New</option>
+      <option value="'Times New Roman', serif">Times New Roman</option>
+    </select>
+  </label>
+  <button id="theme-toggle">🌙 Toggle Theme</button><br><br>
+  <section id="music">
+  <h2>🎵 Background Music</h2>
+  <audio id="bg-music" loop>
+    <source src="sample-3s.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+  <button onclick="toggleMusic()">Play / Pause</button></section>
+</div>
+</section>
+<section id ="Today">
+    <!-- Greeting Block -->
+    <div class="card greeting">
+    <section id="greet">
+    <h2>Good morning, ANANDI</h2></section>
+    <h2>Today</h2>
+    <!-- 🕒 Clock -->
+    <section id="clock">
+     <h4>Current Time</h4>
+     <div id="time-display">Loading...</div>
+    </section>
+     <!-- 📅 Calendar -->
+
+    <section id="calendar">
+    <h2>Current Date</h2>
+    <div id="date-display">Loading...</div>
+    </section>
+     <!-- ☁️ Weather -->
+    <section id="weather">
+      <h4>Weather</h4>
+      <div id="weather-info">Loading weather...</div>
+    </section>
+  </section>
+
+<section id="Update">
+   <div class="card update">
+    <h2>🔍 Google </h2>
+    <input type="text" id="search-query" placeholder="Search Google..." />
+    <button id="search-btn">Search</button><br>
+  <h2>📰 Live News</h2>
+  <ul id="news-list">Loading...</ul>
+  </div>
+</section>
+<!--info-->
+<section id="Info">
+<div class="card info">
+<section id="Custom Events">
+  <h2>📆 Custom Events</h2>
+  <input type="text" id="event-name" placeholder="Event Name (e.g. Exam, Birthday)" />
+  <input type="date" id="event-date" />
+  <button onclick="addEvent()">➕ Add Event</button>
+  <ul id="event-list"></ul></section>
+  <section id="Reminders">
+  <h2>🛎️ Reminders</h2>
+  <input type="text" id="reminder-text" placeholder="Reminder message..." />
+  <input type="datetime-local" id="reminder-time" />
+  <button onclick="addReminder()">Add Reminder</button>
+  <ul id="reminder-list"></ul></section>
+
+  <!--📝 To-Do List -->
+  <section id="to-do">
+    <h2>To-Do List</h2>
+    <input type="text" id="todo-input" placeholder="Add new task & press Enter">
+<ul id="todo-list"></ul>
+<p id="task-count">Total: 0, Completed: 0</p>
+</section>
+
+    <!-- 📝 Sticky Notes -->
+    <section id="notes">
+      <h2>📝 Sticky Notes</h2>
+      <textarea id="note" placeholder="Write your note here..."></textarea><br />
+      <button onclick="saveNote()">💾 Save Note</button>
+      <button onclick="clearNote()">❌ Clear</button></section>
+
+</section>
+
+  <section id="📱Quick Apps">
+    <div class="card app">
+  <h2>🛒 Quick Access Links</h2>
+  <h2> Now Everything is Online </h2>
+  <p>Click on link to open the App:</p>
+  <section id="shopping">
+    <h2>Shopping</h2>
+  <ul>
+    <li><a href="https://www.amazon.in" target="_blank">Amazon</a></li>
+    <li><a href="https://www.flipkart.com" target="_blank">Flipkart</a></li>
+    <li><a href="https://www.meesho.com" target="_blank">Meesho</a></li>
+    <li><a href="https://www.myntra.com" target="_blank">Myntra</a></li>
+  </ul></section>
+  <section id="food">
+  <h2>🍔 Food Delivery</h2>
+  <li><a href="https://www.swiggy.com" target="_blank">🍔 Swiggy</a></li>
+<li><a href="https://www.zomato.com" target="_blank">🍕 Zomato</a></li></section>
+<section id="grocery">
+    <h2>🛍️ Grocery Shopping</h2>
+    <li><a href="https://www.bigbasket.com" target="_blank">🛒 BigBasket</a></li>
+<li><a href="https://blinkit.com" target="_blank">🛍️ Blinkit</a></li>
+<li><a href="https://www.jiomart.com" target="_blank">🧺 JioMart</a></li></section>
+ <section id="Travel">
+    <h2>Travel </h2>
+      <li><a href="https://www.olacabs.com" target="_blank" class="app-card">🛺 Book Ola</a></li>
+      <li></list><a href="https://www.uber.com" target="_blank" class="app-card">🚕 Book Uber</a></li>
+      <li><a href="https://www.irctc.co.in" target="_blank" class="app-card">🚆 Book Train</a></li></section>
+    <section id="social-media">
+    <h2>Social Media</h2>
+  <li><a href="https://www.facebook.com/yourusername" target="_blank">🌐 Facebook</a></li>
+  <li><a href="https://www.instagram.com/yourusername" target="_blank">📸 Instagram</a></li></section>
+  </div>
+</section>
+<!--entertainment-->
+<section id="Entertainment">
+  <div class="card container">
+    <section id="youtube">
+    <h1>🔍 YouTube </h1>
+    <input type="text" id="searchInput" placeholder="Search videos..." />
+    <button onclick="searchYouTube()">Search</button>
+    <div id="results"></div></section>
+    <section id="spotify">
+      <h2>Spotify</h2>
+  <h2>🎵 My Favorite Track</h2>
+ <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6FjbAnaPRPwiP3sciEYctO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></section>
+</section>
+    <!--calendar-->
+<section id="Calendar">
+    <h2>📅 Calendar</h2><br> <br>
+<div class="calendar">
+  <div id="calendar-header">
+    <button onclick="changeMonth(-1)">⬅️</button>
+    <span id="calendar-month-year"></span>
+    <button onclick="changeMonth(1)">➡️</button>
+  </div>
+  <div class="calendar-grid" id="calendar-days"></div></section>
+  <!--calculator-->
+<section id="Calculator">
+<h2>Calculator</h2>
+<div class="calculator"></div>
+    <input type="text" id="display" disabled />
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button onclick="appendValue('/')">÷</button>
+
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button onclick="appendValue('*')">×</button>
+
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button onclick="appendValue('-')">−</button>
+
+      <button onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="appendValue('+')">+</button>
+    </div>
+  </section>
+  
+
+<section id="Game">
+<h1>🎮 Tic-Tac-Toe</h1>
+<button onclick="openTicTacToe()">Play Game</button>
+<div id="tictactoe-popup" style="display:none;">
+  <h2>Tic Tac Toe</h2>
+  <table id="board"></table>
+  <p id="result"></p>
+  <button onclick="resetBoard()">Restart</button>
+  <button onclick="closeTicTacToe()">Close</button>
+</div>
+  </section>
+  
+  <section id="Timer">
+    <div class="card Timer">
+  <section id="focus-timer">
+  <h2>⏳ Focus Timer</h2>
+  <p id="timer-display">30:00</p>
+  <button onclick="startTimer()">▶️ Start</button>
+  <button onclick="pauseTimer()">⏸️ Pause</button>
+  <button onclick="resetTimer()">🔁 Reset</button></section>
+
+  <section id="breathing-timer">
+  <h1>🧘‍♀️ Breathing Timer</h1>
+  <div id="breathe-circle"></div>
+  <p id="breathe-text">Click "Start Breathing"</p>
+  <button id="start-breathing">Start Breathing</button>
+  <button id="stop-breathing">Stop Breathing</button></section>
+  </section>
+  <section id="Study & Jobs">
+    <h2>📚 Study & Jobs</h2><br><br>
+    <div class="card study-jobs">
+      <section><h2>Study Resources</h2>
+      <ul>
+        <li><a href="https://www.khanacademy.org" target="_blank">Khan Academy</a></li><br>
+        <li><a href="https://www.geeksforgeeks.org/"target="_blank">Geeks For Geeks</a></li><br>
+        <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li><br>
+        <li><a href="https://www.coursera.org" target="_blank">Coursera</a></li><br>
+        <li><a href="https://www.edx.org" target="_blank">edX</a></li><br>
+        <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li><br>
+      </ul></section>
+      <section><h2>Job Search</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/jobs" target="_blank">LinkedIn Jobs</a></li><br>
+        <li><a href="https://www.naukri.com" target="_blank">Naukri</a></li><br>
+        <li><a href="https://www.indeed.com" target="_blank">Indeed</a></li>
+      </ul></section>
+      </div>
+      </section>
+   <section>
+    <section id="Fun"> 
+    <div style="background-color: white;"><h1>🎁 Surprise of the Day</h1>
+  <p id="daily-surprise"></p>
+  <button id="refresh-surprise">Get New Surprise</button></div><br><br>
+<div class="card mood-tracker">
+  <h2>🧠 How are you feeling today?</h2>
+  <div class="mood-options">
+    <button class="mood" data-mood="happy">😊</button>
+    <button class="mood" data-mood="sad">😢</button>
+    <button class="mood" data-mood="angry">😡</button>
+    <button class="mood" data-mood="sleepy">😴</button>
+    <button class="mood" data-mood="excited">🤩</button>
+  </div>
+  <p id="selected-mood">No mood selected.</p>
+</div>
+</section>
+ </div>
+ <div class="footer">
+   <p style="margin-left: 50px; font-weight: bold;">Made with ❤️ by ANANDI</p>
+</div>
+ <script src="script.js" defer></script>
+ </body>
+ </html>
