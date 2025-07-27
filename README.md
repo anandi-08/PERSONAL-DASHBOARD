@@ -5,5 +5,6 @@ This is my first Git Repository.
 - 🌈 Change background image or color  
 - ✏️ Modify font styles 
 - 🎨 Customize color themes using simple CSS.
+  
   It’s meant for daily use to boost productivity and minimize distractions by keeping all essentials on one screen. 
              
